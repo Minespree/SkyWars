@@ -1,0 +1,8 @@
+name: SkyWars
+version: ${gitCommit}
+main: net.minespree.skywars.SkyWarsPlugin
+depend: [Rise, Wizard]
+
+commands:
+  hurryevent:
+    description: Starts next game event
