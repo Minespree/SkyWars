@@ -1,10 +1,10 @@
-# Skywars
+# SkyWars
 
 [![Discord](https://img.shields.io/discord/352874955957862402.svg)](https://discord.gg/KUFmKXN)
-[![License](https://img.shields.io/github/license/Minespree/Skywars.svg)](LICENSE)
+[![License](https://img.shields.io/github/license/Minespree/SkyWars.svg)](LICENSE)
 ![Documentation](https://img.shields.io/badge/docs-missing-red.svg)
 
-This is the code that powered the Skywars mini-game of the former Minespree Network.
+This is the code that powered the SkyWars game of the former Minespree Network.
 
 Besides the removal of some branding and configuration data, it is more or less unmodified. It is probably not _directly_ useful to third parties in its current state, but it may be help in understanding how the Minespree network operated.
 
@@ -24,11 +24,22 @@ You can find detailed installation instructions for these tools on the [Getting 
 
 ## Getting started
 
+This project depends on these modules, so they should also be built and placed on your `plugins/` directory before running SkyWars:
+
+* [Feather](https://github.com/Minespree/Feather)
+* [Rise](https://github.com/Minespree/Rise)
+* [Pirate](https://github.com/Minespree/Pirate)
+* [Wizard](https://github.com/Minespree/Wizard)
+* [Babel](https://github.com/Minespree/Babel)
+* [ProtocolLib](https://www.spigotmc.org/resources/protocollib.1997/)
+
 You can build this project running the following command:
 
 ```
 mvn package
 ```
+
+Next, move the produced artifact on `target/` to your Spigot server `plugins/` directory and restart the instance. Please refer to the [Rise](https://github.com/Minespree/Rise) documentation for instructions on how to setup this game (e.g. adding arenas and lobby).
 
 This project also includes a GitLab CI `.gitlab-ci.yml` build config file to automatically build and deploy our artifacts to the main and development networks. This process requires the use of a custom Docker image, but its setup is documented on the [Docs](https://github.com/Minespree/Docs/blob/master/deploy/PLAYPEN_DEPLOYER.md) page.
 
@@ -36,7 +47,8 @@ This project also includes a GitLab CI `.gitlab-ci.yml` build config file to aut
 
 This repo contains the following components:
 
-* Skywars mini-game
+* SkyWars game state flow
+* Tiered kits
 
 ## Authors
 
@@ -66,7 +78,7 @@ This project was maintained by the Minespree Game team. If you have any question
 
 ## License
 
-Skywars is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+SkyWars is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
 
